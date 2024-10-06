@@ -21,17 +21,16 @@ extra["springCloudVersion"] = "2023.0.2"
 extra["springFunctionsCatalogVersion"] = "5.0.0"
 
 dependencies {
-	implementation("org.apache.poi:poi-ooxml:5.3.0")
 
+	//Spring AI Dependencies
 	implementation("org.springframework.ai:spring-ai-pdf-document-reader")
 	implementation("org.springframework.ai:spring-ai-tika-document-reader")
-
 	implementation("org.springframework.ai:spring-ai-pgvector-store")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.postgresql:postgresql")
-
-	implementation("org.springframework.ai:spring-ai-anthropic-spring-boot-starter")
 	implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
+
+	//Spring boot dependencies
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

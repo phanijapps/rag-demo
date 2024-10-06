@@ -24,7 +24,6 @@ class OpenAIConfig {
 
         var openAiChatOptions = OpenAiChatOptions.builder()
             .withModel("gpt-3.5-turbo")
-
             .withTemperature(0.4f)
             .withMaxTokens(200)
             .build();

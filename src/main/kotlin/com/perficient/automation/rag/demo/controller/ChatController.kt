@@ -1,5 +1,6 @@
 package com.perficient.automation.rag.demo.controller
 
+import com.perficient.automation.rag.demo.PromptRequest
 import com.perficient.automation.rag.demo.service.ChatService
 import org.springframework.ai.chat.model.ChatResponse
 import org.springframework.ai.embedding.EmbeddingResponse
@@ -13,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController
 class ChatController(val chatService: ChatService) {
 
     @PostMapping("/chat")
-    fun chat(@RequestBody query: String) : ChatResponse {
-        return chatService.generateAIResponse(query);
+    fun chat(@RequestBody promptRequest: PromptRequest) : ChatResponse {
+        return chatService.generateAIResponse(promptRequest);
     }
 
 

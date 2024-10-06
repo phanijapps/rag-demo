@@ -44,7 +44,6 @@ class DataLoaderService(val vectorStore: VectorStore,
                 // For each file, get the file pointer (the file object itself)
                 if (file.isFile) {
                     logInfo {  "File name: ${file.name}, Path: ${file.absolutePath}" }
-
                     when {
                         file.extension.equals("txt", ignoreCase = true) -> loadText(file)
                        // file.extension.equals("pdf", ignoreCase = true) -> loadPDF(file)
